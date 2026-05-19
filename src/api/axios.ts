@@ -10,7 +10,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api/v1", // your base URL from .env
+  baseURL: "https://godparticals.onrender.com/api/v1", // your base URL from .env
 });
 
 // const api = axios.create({
