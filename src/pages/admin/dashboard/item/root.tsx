@@ -54,7 +54,7 @@ interface Product {
 }
 
 const CATEGORIES = ["CORE", "HOME_APPLIANCE", "ELECTRONICS", "FASHION"] as const;
-type ProductCategory = (typeof CATEGORIES)[number];
+// type ProductCategory = (typeof CATEGORIES)[number];
 
 // Helper — always sends the literal string "true" or "false", never relies on
 // String(boolean) coercion that some backends misread as truthy for any string.
