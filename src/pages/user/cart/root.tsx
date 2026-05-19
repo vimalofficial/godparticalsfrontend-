@@ -4,7 +4,7 @@ import Navbar from "../../../components/Navbar";
 import api from "../../../api/axios";
 import {
   Table, Image, Spin, Empty, Button, Modal,
-  Form, Input, InputNumber, notification, Divider,
+  Form, Input, notification, Divider,
 } from "antd";
 import type { TableProps } from "antd";
 import {
@@ -47,7 +47,7 @@ export default function Cart() {
   const [addressModal, setAddressModal] = useState(false);
   const [orderLoading, setOrderLoading] = useState(false);
   const [removingId, setRemovingId] = useState<string | null>(null);
-  const [updatingId, setUpdatingId] = useState<string | null>(null);
+  // const [updatingId, setUpdatingId] = useState<string | null>(null);
 
   // Load Razorpay script
   useEffect(() => {
