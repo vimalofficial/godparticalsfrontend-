@@ -253,7 +253,7 @@ const Root = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         {products.map((product, index) => {
                             const id = product.id || product._id || String(index);
-                            const isWishlisted = wishlist.has(id);
+                            // const isWishlisted = wishlist.has(id);
 
                             return (
                                 <Card

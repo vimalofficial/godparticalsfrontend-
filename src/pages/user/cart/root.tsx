@@ -88,20 +88,20 @@ export default function Cart() {
     }
   };
 
-  const handleQuantityChange = async (cartItemId: string, quantity: number) => {
-    try {
-      setUpdatingId(cartItemId);
-      await api.patch(`/user/cart/${cartItemId}`, { quantity });
-      setItems((prev) =>
-        prev.map((i) => i.id === cartItemId ? { ...i, quantity } : i)
-      );
-      fetchCart();
-    } catch {
-      notification.error({ message: "Failed to update quantity", placement: "topRight" });
-    } finally {
-      setUpdatingId(null);
-    }
-  };
+  // const handleQuantityChange = async (cartItemId: string, quantity: number) => {
+  //   try {
+  //     setUpdatingId(cartItemId);
+  //     await api.patch(`/user/cart/${cartItemId}`, { quantity });
+  //     setItems((prev) =>
+  //       prev.map((i) => i.id === cartItemId ? { ...i, quantity } : i)
+  //     );
+  //     fetchCart();
+  //   } catch {
+  //     notification.error({ message: "Failed to update quantity", placement: "topRight" });
+  //   } finally {
+  //     setUpdatingId(null);
+  //   }
+  // };
 
   // Place order → address modal
   const handlePlaceOrder = () => setAddressModal(true);
